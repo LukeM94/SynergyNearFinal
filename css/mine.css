@@ -1,0 +1,193 @@
+body{
+	height: 500px;
+	background-attachment: fixed;
+}
+
+img.circleImages { 
+width: 200px;
+height: 200px; 
+}
+
+#bannerH1{
+  text-align: center;
+  border-width: 10px;
+  border-color: white;
+
+}
+
+#Logo{
+  margin: auto;
+}
+
+#MediaImages{
+	display: block;
+	margin: auto;
+	position: absolute;
+	margin-left: 900px;
+}
+
+#Film{
+	margin: auto;
+	margin-left: 100px;
+}
+
+#Music{ 
+	margin: auto;
+	margin-left: 600px;
+}
+
+.searchContainer{
+	width: 500px;
+	margin: auto;
+}
+
+/* Start of CSS for slider */
+
+ #sliderBody {
+      -webkit-font-smoothing: antialiased;
+      font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #232525;
+      padding-top: 70px;
+    }
+
+    #slides .slidesjs-navigation {
+      margin-top:3px;
+    }
+
+    #slides .slidesjs-previous {
+      margin-right: 5px;
+      float: left;
+    }
+
+    #slides .slidesjs-next {
+      margin-right: 5px;
+      float: left;
+    }
+
+    .slidesjs-pagination {
+      margin: 6px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(/img/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slides a:link,
+    #slides a:visited {
+      color: #333
+    }
+
+    #slides a:hover,
+    #slides a:active {
+      color: #9e2020
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+
+
+	#slides {
+		display: none;
+    }
+
+    .container {
+		margin: 0 auto;
+		width: 900px;
+		height: 300px;
+		margin-top: 400px;
+    }
+
+    /* For tablets & smart phones */
+    @media (max-width: 767px) {
+      body {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .container {
+        width: auto
+      }
+      #Title{
+       margin-right: -25px;
+       width: 600px;
+       height: auto;
+       margin-bottom: 50px;
+      }
+/*      #Logo{
+       margin-left: 160px;
+       margin-bottom: 50px;
+      } */
+      #Music{
+       float: left;
+       margin-left: -200px;
+      }
+      #Film{
+       float: left;
+       margin-right: -300px;
+       margin-left: -0px;
+      }
+
+    }
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 1250px) {
+      .container {
+        width: 724px
+      }
+      #MediaImages{
+         margin-left: 50px;
+      }
+      #Film{
+      	margin-left: 10px;
+      }
+      #Music{
+      	margin-left: 200px;
+      }
+      #Title{
+      	margin-right: 15px;
+      	margin-bottom: 0px;
+      }
+/*      #Logo{
+      	margin-bottom: 100px;
+      }*/
+    }
+
+    /* For larger displays */
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px
+      }
+    }
+	/* End of CSS for slider */
+
+/

@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="The media search">
+    <meta name="author" content="Synergy Media">
+    <link rel="icon" href="favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+    <title>Synergy Media</title>
+
+    <script type="text/javascript" src="js/konami.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://static.echonest.com/demo/common/get_key_with_callback.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+
+  <script type="text/javascript">
+		var easter_egg = new Konami(function(){
+			var w = 400;
+        	var h = 400;
+        	var left = Number((screen.width/2)-(w/2));
+        	var tops = Number((screen.height/2)-(h/2));
+			window.alert("You've enetered the Konami Code!");
+			window.open ("https://embed.spotify.com/?uri=spotify:track:7ixxyJJJKZdo8bsdWwkaB6",'', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+tops+', left='+left);
+		});
+	</script>
+
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">Synergy Media</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li class="active"><a href="music.html">Music</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ==================================================-->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+
+      <!-- START THE FEATURETTES
+      ========================================================================================================================
+      -->
+
+
+      <div class="row featurette">
+        <div class="row vertical-center-row">
+
+  		        <div class="col-lg-12">
+  	            <div class="row ">
+  	                <div id="search" class="col-xs-4 col-xs-offset-4">
+  					                <input title="Artist"type="text" id="artist"class="form-control" placeholder="Enter music to search for & hit enter..." onkeydown="if (event.keyCode == 13) newArtist()" name="artist"/>
+  					       </div><!-- /.col-lg-6 -->
+  	            </div>
+  	        </div>
+  	    </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Spotify <span class="text-muted">Results</span></h2>
+        </div>
+        <div class="col-md-5">
+          <div id="info"> </div>
+          <div id="all_results">
+              <div id='tracks'>
+                  <div id="results"> </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Deezer <span class="text-muted">Results</span></h2>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <div id="info"> </div>
+          <div id='playlist'> </div>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2015 Synergy Media &middot; <a href="#">Privacy (We promise not to steal all your data!)</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/vendor/holder.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <script type="text/javascript">
+
+    jQuery.ajaxSettings.traditional = true;
+
+    var embed = '<iframe src="https://embed.spotify.com/?uri=TRACK_URI" style="width:100px; height:100px;" frameborder="0" allowTransparency="true">';
+
+
+    function fetchArtistPlaylist(artist,  wandering, variety) {
+        var url = 'http://developer.echonest.com/api/v4/playlist/static?api_key=BKN4JQVLVFTTANQT1 &callback=?';
+
+        $("#all_results").hide();
+        info("Creating the playlist ...");
+        $.getJSON(url, { 'artist': artist, 'format':'jsonp',
+                'bucket': [ 'id:spotify', 'tracks'], 'limit' : true,
+                'results': 12, 'type':'artist-radio', 'variety' : variety,
+                'distribution' : wandering ? 'wandering' : 'focused' }, function(data) {
+
+            info("");
+            $("#results").empty();
+            $("#all_results").show();
+
+            for (var i = 0; i < data.response.songs.length; i++) {
+                var song = data.response.songs[i];
+                var tid = song.tracks[0].foreign_id.replace('-WW', '');
+                var tembed = embed.replace('TRACK_URI', tid);
+                var li = $("<span>").html(tembed);
+                $("#results").append(li);
+            }
+        });
+    }
+
+
+    function newArtist() {
+        var artist = $("#artist").val();
+        fetchArtistPlaylist(artist, false, .2);
+    }
+
+    function info(txt) {
+        $("#info").text(txt);
+    }
+
+
+    $(document).ready(function() {
+        $("#go").removeAttr("disabled");
+        $("#all_results").hide();
+    });
+    </script>
+
+    <script type="text/javascript">
+
+    var DEEZER_DEMO_API_KEY='BKN4JQVLVFTTANQT1';
+
+    var audio
+    jQuery.ajaxSettings.traditional = true;
+
+
+    function createSongDiv(song) {
+        var songDiv = $("<div class='sdiv' id=" + song.id + "-div>");
+        return songDiv;
+    }
+
+    function addSongs(songs) {
+        var playlist = $("#playlist");
+
+        for (var i = 0; i < songs.length; i++) {
+            var div = createSongDiv(songs[i]);
+            playlist.append(div);
+            fetchDeezerTrack(songs[i], div);
+        }
+    }
+
+
+    function fetchDeezerTrack(song, div) {
+        if (song.tracks.length > 0) {
+            var tid = song.tracks[0].foreign_id.split(':')[2];
+            var url = 'http://api.deezer.com/2.0/track/' + tid + '?callback=?'
+
+            jQuery.getJSON(url, { output:'jsonp'},
+                function(data) {
+                    var link = $("<a target='deezer'>").attr('href', data.link);
+                    var cover = $("<img class='timg'>").attr('src', data.album.cover).attr("style", "float:left");
+                    link.append(cover);
+                    div.append(link);
+
+                    var tdiv = $("<div class='tdiv'>");
+                    tdiv.append( $("<div class='title'>").text(data.title));
+                    tdiv.append( $("<div>").text(data.album.title));
+                    tdiv.append( $("<div>").text(data.artist.name));
+                    div.append(tdiv);
+                    div.append(createPlayer(data.preview));
+                    div.append($('<br clear="left">'));
+                }
+            );
+        }
+    }
+
+    function createPlayButton(audio) {
+        var button = $("<button>").text("preview");
+        button.click(
+            function()  {
+                alert("Playing " + audio);
+            }
+        );
+        return button;
+    }
+
+    function createPlayer(audio) {
+        var player = $("<audio class='player' preload='none' controls='controls'>").attr("src", audio);
+        return player;
+    }
+
+
+    function info(msg) {
+        $("#info").text(msg);
+    }
+
+    function fetchPlaylist(artist) {
+        info("Getting playlist for " + artist);
+        $("#playlist").empty();
+        var url = 'http://developer.echonest.com/api/v4/playlist/static?callback=?'
+        jQuery.getJSON(url,
+            {   artist:artist,
+                type:'artist-radio',
+                format:'jsonp',
+                bucket: ['id:deezer', 'tracks'],
+                limit: true,
+                'api_key' : DEEZER_DEMO_API_KEY
+            },
+            function(data) {
+                info("");
+                if (data.response.status.code == 0) {
+                    var songs = data.response.songs;
+                    addSongs(songs);
+                } else {
+                    info("Can't create a playlist for " + artist);
+                }
+            }
+        );
+    }
+
+    function initUI() {
+        $("#artist").keypress(
+            function(e) {
+                if(e.which == 13) {
+                    var artist = $("#artist").val();
+                    fetchPlaylist(artist);
+                }
+            }
+        );
+    }
+
+
+    $(document).ready(function() {
+        fetchApiKey( function(api_key, isLoggedIn) {
+            DEEZER_DEMO_API_KEY = api_key;
+            initUI();
+        });
+    });
+
+    </script>
+  </body>
+</html>

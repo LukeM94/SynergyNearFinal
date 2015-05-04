@@ -1,0 +1,7 @@
+html { 
+  background: url(http://www.livemusictylertx.com/wp-content/uploads/2014/05/g_live_music.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
